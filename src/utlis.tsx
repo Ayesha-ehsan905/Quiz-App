@@ -67,3 +67,4 @@ const question: props[] = [
 ];
 
 export default question;
+// export default () => Promise.resolve(question.sort(() => 0.5 - Math.random()));

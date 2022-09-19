@@ -1,0 +1,11 @@
+1. an array that have 10 questions
+2. 2nd array that have 4options against each questions
+3. 3rd array that have one correct option against each questions.
+4. now on utilis.tsx  display a question and creat an array that wull shuffle that option and display
+
+5. user cannnot move forward until it choose an option r the timer of the questio(10sec is not over)
+     i.means next button will dislay when the timer is over or use choose the option.No back button
+6. on choosing the options we will move to nxt option as well as check if the option of current question is
+    correct or not.
+      i. if correct add score
+       ii. display the score in the end

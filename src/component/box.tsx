@@ -2,11 +2,13 @@ import { styled } from "./style";
 
 export const Container = styled("div", {
   //   backgroundColor: "White",
-  width: "90%",
-  height: "auto",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  "&.container": {
+    width: "90%",
+    height: "auto",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
 export const QuestionBox = styled(Container, {
   "&.outer_box": {
@@ -26,5 +28,10 @@ export const QuestionBox = styled(Container, {
     alignItems: "center",
     justifyContent: "center",
     margin: "10px 0",
+  },
+
+  "&.score": {
+    height: "500px",
+    marginTop: "40px",
   },
 });

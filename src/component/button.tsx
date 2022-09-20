@@ -1,7 +1,7 @@
 import { styled } from "./style";
 
 export const Button = styled("button", {
-  "&.bnt": {
+  "&.bnt_disabled": {
     padding: "16px 32px",
     textAlign: "center",
     textDecoration: "none",
@@ -9,7 +9,7 @@ export const Button = styled("button", {
 
     margin: "4px 2px",
     transitionDuration: " 0.4s",
-    cursor: "pointer",
+    cursor: "not-allowed",
     backgroundColor: "White",
     color: "black",
     border: "2px solid #e7e7e7",
@@ -21,6 +21,7 @@ export const Button = styled("button", {
       border: "2px solid Black",
     },
   },
+
   "&.btn_options": {
     margin: "20px 0",
     backgroundColor: "#7d3cff",

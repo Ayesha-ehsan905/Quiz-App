@@ -1,16 +1,15 @@
 import { Container, QuestionBox } from "./component/box";
 import Quiz from "./mainQuiz";
-
-function App() {
+const App = (props: any) => {
   return (
     <>
-      <Container>
+      <Container className="container">
         <QuestionBox className="outer_box">
           <Quiz />
         </QuestionBox>
       </Container>
     </>
   );
-}
+};
 
 export default App;

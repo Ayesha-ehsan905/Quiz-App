@@ -16,7 +16,7 @@ export const Button = styled("button", {
     fontSize: "24px",
     "&:hover": {
       backgroundColor: "#e7e7e7",
-      color: "White",
+      color: "Black",
       fontWeight: "Bold",
       border: "2px solid Black",
     },
@@ -32,6 +32,7 @@ export const Button = styled("button", {
     fontSize: "1.6em",
     letterSpacing: "1px",
     cursor: " pointer",
-    // width: "150px",
+    width: "100%",
+    height: "auto",
   },
 });

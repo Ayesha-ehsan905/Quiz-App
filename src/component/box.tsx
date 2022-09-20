@@ -27,7 +27,6 @@ export const QuestionBox = styled(Container, {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    margin: "10px 0",
   },
 
   "&.score": {

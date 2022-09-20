@@ -66,12 +66,8 @@ export default () => {
     settimer(seconds - 1);
 
     if (seconds == 1) {
-      if (currentQuestion > question.length - 1) {
-        checkAnswer("You missed it");
-        currentQuestionClickHandler();
-      } else {
-        setShowScore(true);
-      }
+      checkAnswer("You missed it");
+      currentQuestionClickHandler();
     }
   };
 

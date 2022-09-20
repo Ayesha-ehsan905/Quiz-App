@@ -36,7 +36,6 @@ export default () => {
     const props = e.currentTarget.value;
 
     setbtnDisabled(false);
-
     if (correctAnswer === props) {
       setscore(score + 1);
     }
@@ -80,7 +79,6 @@ export default () => {
                   className="btn_options"
                   style={{
                     cursor: btnDisabled ? "pointer " : "not-allowed",
-                    // backgroundColor: anssss ? " Green" : "rgb(125, 60, 255);",
                   }}
                   //  onClick={btnDisabledOnClickandler}
                   onClick={checkAnswer}

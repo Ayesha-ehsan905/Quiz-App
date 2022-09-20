@@ -31,7 +31,7 @@ export const QuestionBox = styled(Container, {
   },
 
   "&.score": {
-    height: "500px",
+    height: "auto",
     marginTop: "40px",
   },
 });

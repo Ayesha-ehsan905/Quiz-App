@@ -27,11 +27,11 @@ export default () => {
   // current qst correct ans
   const correctAnswer = question[currentQuestion].correctAnswer;
 
-  const nxtQuestion = currentQuestion;
   const currentQuestionClickHandler = () => {
-    setbtnDisabled(true);
-    settimer(10);
+    const nxtQuestion = currentQuestion;
     if (nxtQuestion < question.length - 1) {
+      setbtnDisabled(true);
+      settimer(10);
       setcurrentQuestion(
         (currentQuestion) => (currentQuestion = currentQuestion + 1)
       );
@@ -66,8 +66,12 @@ export default () => {
     settimer(seconds - 1);
 
     if (seconds == 1) {
-      checkAnswer("You missed it");
-      currentQuestionClickHandler();
+      if (currentQuestion > question.length - 1) {
+        checkAnswer("You missed it");
+        currentQuestionClickHandler();
+      } else {
+        setShowScore(true);
+      }
     }
   };
 
@@ -154,7 +158,7 @@ export default () => {
           <span style={{ fontSize: "30px", color: "Red" }}>
             Time Left(s):{seconds}
           </span>
-          <Text>{question[nxtQuestion].question}</Text>
+          <Text>{question[currentQuestion].question}</Text>
           <QuestionBox className="option_btn">
             {/* {question[currentQuestion].answers.map((ans) => { */}
             {shuffleArray.map((ans) => {

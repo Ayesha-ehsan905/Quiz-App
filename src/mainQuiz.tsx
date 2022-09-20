@@ -64,7 +64,9 @@ export default () => {
   }, [seconds, currentQuestion]);
 
   const timer = () => {
-    settimer(seconds - 1);
+    if (seconds > 0) {
+      settimer(seconds - 1);
+    }
 
     if (seconds == 1) {
       checkAnswer("You missed it");

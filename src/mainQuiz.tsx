@@ -36,6 +36,7 @@ export default () => {
         (currentQuestion) => (currentQuestion = currentQuestion + 1)
       );
     } else {
+      settimer(0);
       setShowScore(true);
     }
     return currentQuestion;
@@ -91,10 +92,8 @@ export default () => {
                 return (
                   <div>
                     <ReportText className="question">
-                      <span style={{ fontWeight: "Bold" }}>
-                        {" "}
-                        Question :{e.question}
-                      </span>
+                      <span style={{ fontWeight: "Bold" }}>Question</span> :
+                      {e.question}
                     </ReportText>
                     <ReportText className="options">
                       <span style={{ fontWeight: "Bold" }}>Your Answer :</span>

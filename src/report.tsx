@@ -21,6 +21,7 @@ export const Report = (props) => {
                   style={{
                     backgroundColor: color ? "green" : "red",
                     padding: "10px",
+                    marginLeft: "10px",
                   }}
                 >
                   {e.answer}
@@ -28,7 +29,9 @@ export const Report = (props) => {
               </ReportText>
               <ReportText className="options">
                 <span style={{ fontWeight: "Bold" }}>Correct Answer :</span>
-                <span style={{ fontWeight: "Bold" }}>{e.correctAnswer}</span>
+                <span style={{ fontWeight: "Bold", marginLeft: "10px" }}>
+                  {e.correctAnswer}
+                </span>
               </ReportText>
             </div>
           );

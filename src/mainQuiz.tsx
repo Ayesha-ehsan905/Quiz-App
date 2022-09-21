@@ -97,44 +97,61 @@ export const Quiz = () => {
         </QuestionBox>
       ) : (
         <>
-          <span style={{ fontSize: "30px", color: "Red", marginTop: "30px" }}>
-            Time Left(s):{seconds}
-          </span>
-          <Text>{question[currentQuestion].question}</Text>
-          <QuestionBox className="option_btn">
-            {/* {question[currentQuestion].answers.map((ans) => { */}
-            {shuffleArray.map((ans) => {
-              return (
+          <QuestionBox className="question-section">
+            <QuestionBox className="question-section-child">
+              <QuestionBox className="">
+                <span className="timer-text ">Time Left(s):{seconds}</span>
+              </QuestionBox>
+              <QuestionBox className="question-count">
+                <span className="question-count-span">
+                  Question {currentQuestion + 1}/{question.length}
+                </span>
+              </QuestionBox>
+              <QuestionBox className="question-text">
+                <Text>{question[currentQuestion].question}</Text>
+              </QuestionBox>
+              <QuestionBox className="button-section">
                 <Button
-                  className="btn_options"
+                  className="bnt_disabled"
                   style={{
-                    cursor: btnDisabled ? "pointer " : "not-allowed",
-                    backgroundColor:
-                      ans == answer ? "none" : " rgb(125, 60, 255)",
-                    border: ans == answer ? "1px solid purple" : " none",
-                    background:
-                      ans == answer ? "border-box" : " rgb(125, 60, 255)",
-                    color: ans == answer ? "black" : " white",
+                    cursor: btnDisabled ? "not-allowed " : "pointer",
                   }}
-                  //  onClick={btnDisabledOnClickandler}
-                  onClick={() => checkAnswer(ans)}
-                  disabled={!btnDisabled}
+                  onClick={currentQuestionClickHandler}
+                  disabled={btnDisabled}
                 >
-                  {ans}
+                  Next
                 </Button>
-              );
-            })}
+              </QuestionBox>
+            </QuestionBox>
+            <QuestionBox className="question-section-child">
+              <QuestionBox className="answer-section">
+                {shuffleArray.map((ans) => {
+                  return (
+                    <Button
+                      className="btn_options"
+                      style={{
+                        cursor: btnDisabled ? "pointer " : "not-allowed",
+                        backgroundColor:
+                          ans == answer ? "none" : " rgb(11 32 106)",
+                        border: ans == answer ? "1px solid white" : "none",
+                        background:
+                          ans == answer ? "border-box" : " rgb(11 32 106)",
+                        // color: ans == answer ? "#252d4a" : " white",
+                        fontWeight: ans == answer ? "700" : " 500",
+                      }}
+                      //  onClick={btnDisabledOnClickandler}
+                      onClick={() => checkAnswer(ans)}
+                      disabled={!btnDisabled}
+                    >
+                      {ans}
+                    </Button>
+                  );
+                })}
+              </QuestionBox>
+            </QuestionBox>
           </QuestionBox>
-          <Button
-            className="bnt_disabled"
-            style={{
-              cursor: btnDisabled ? "not-allowed " : "pointer",
-            }}
-            onClick={currentQuestionClickHandler}
-            disabled={btnDisabled}
-          >
-            Next
-          </Button>
+
+          {/* <Text>{question[currentQuestion].question}</Text> */}
         </>
       )}
     </>

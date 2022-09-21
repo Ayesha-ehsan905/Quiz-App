@@ -10,7 +10,7 @@ export const Report = (props) => {
           const color = cor_ans == ans;
 
           return (
-            <div>
+            <div style={{ margin: "40px auto" }}>
               <ReportText className="question">
                 <span style={{ fontWeight: "Bold" }}>Question</span> :
                 {e.question}

@@ -7,24 +7,25 @@ export const Button = styled("button", {
     textDecoration: "none",
     display: "inline-block",
 
-    margin: "4px 2px",
+    // margin: "90px auto",
     transitionDuration: " 0.4s",
     cursor: "not-allowed",
-    backgroundColor: "White",
-    color: "black",
-    border: "2px solid #e7e7e7",
+    backgroundColor: "rgb(11 32 106)",
+    color: "white",
+    border: "4px solid #e7e7e7",
     fontSize: "24px",
     "&:hover": {
-      backgroundColor: "#e7e7e7",
-      color: "Black",
+      // backgroundColor: "#e7e7e7",
+      color: "white",
       fontWeight: "Bold",
-      border: "2px solid Black",
+      border: "2px solid white",
+      background: "none",
     },
   },
 
   "&.btn_options": {
     margin: "20px 0",
-    backgroundColor: "#7d3cff",
+
     border: "none",
     padding: "20px 40px",
     borderRadius: "5px",

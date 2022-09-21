@@ -1,12 +1,13 @@
 import { styled } from "./style";
 
 export const Text = styled("p", {
-  lineHeight: "27px",
+  lineHeight: "32px",
   letterSpacing: "1px",
-  fontSize: "2em",
-  textAlign: "center",
+  fontSize: "28px",
+  // textAlign: "center",
   width: "80%",
   margin: "50px 0",
+  fontWeight: "800",
 });
 
 export const ReportText = styled("p", {
@@ -14,9 +15,11 @@ export const ReportText = styled("p", {
     fontFamily: "sans-serif",
     fontSize: "24px",
     lineHeight: "20px",
+    margin: "20px auto",
   },
   "&.options": {
     fontFamily: "sans-serif",
     fontSize: "20px",
+    margin: "20px auto",
   },
 });

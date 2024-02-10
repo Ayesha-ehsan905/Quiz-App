@@ -35,3 +35,4 @@ i18n
   });
 
 export default i18n;
+// /?lng=en force local host to change the language

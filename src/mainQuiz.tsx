@@ -4,6 +4,7 @@ import { Button } from "./component/button";
 import { ReportText, Text } from "./component/text";
 import { Report } from "./report";
 import question from "./utlis";
+import { useTranslation, Trans } from "react-i18next";
 
 type ReportObject = {
   question: string;
@@ -11,6 +12,8 @@ type ReportObject = {
   correctAnswer: string;
 };
 export const Quiz = () => {
+  const { t } = useTranslation();
+
   // current qst to display and if size is greater then 10 then display score
   const [currentQuestion, setcurrentQuestion] = useState<number>(0);
   //btn disabled if user doesnot select the ans
@@ -104,7 +107,7 @@ export const Quiz = () => {
               </QuestionBox>
               <QuestionBox className="question-count">
                 <span className="question-count-span">
-                  Question {currentQuestion + 1}/{question.length}
+                  {t("ques.Question")} {currentQuestion + 1}/{question.length}
                 </span>
               </QuestionBox>
               <QuestionBox className="question-text">
